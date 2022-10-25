@@ -1,5 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Pressable } from "react-native";
+import Icon from "react-native-ico-material-design";
 import ProBanner from "./src/components/ProBanner";
+import Dashboard from "./src/views/Dashboard";
 
 export default function App() {
   return (
@@ -14,6 +16,9 @@ export default function App() {
               "Remove ads, add profile stats, activity and service filters, favorite streaming services and more by upgrading to Pro"
             }
           />
+        </View>
+        <View>
+          <Dashboard />
         </View>
       </View>
     </View>
