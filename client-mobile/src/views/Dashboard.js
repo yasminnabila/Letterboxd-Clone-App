@@ -1,5 +1,6 @@
-// import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { useState, useEffect } from "react";
+import { FlatList, SafeAreaView } from "react-native";
 
 const Dashboard = () => {
   const [movie, setMovie] = useState([]);
@@ -16,7 +17,18 @@ const Dashboard = () => {
   }, []);
   console.log(movie);
 
-  
+  return (
+    <SafeAreaView style={styles.safeAreaDashboard}>
+      <View style={styles.itemDashboard}>
+        <Text>Movie cards will be here</Text>
+        <FlatList></FlatList>
+      </View>
+    </SafeAreaView>
+  );
 };
 
+const styles = StyleSheet.create({
+  safeAreaDashboard: {},
+  itemDashboard: {},
+});
 export default Dashboard;
