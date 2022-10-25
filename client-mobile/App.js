@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import MovieCard from "./src/components/MovieCard";
+import ProBanner from "./src/components/ProBanner";
 
 export default function App() {
   return (
@@ -9,8 +9,11 @@ export default function App() {
         <Text style={styles.sectionTitle}>Letterboxd</Text>
         <View style={styles.movies}>
           {/* * This is where the movie cards will show * */}
-          <MovieCard text={"movie 1"} />
-          <MovieCard text={"movie 2"} />
+          <ProBanner
+            text={
+              "Remove ads, add profile stats, activity and service filters, favorite streaming services and more by upgrading to Pro"
+            }
+          />
         </View>
       </View>
     </View>
