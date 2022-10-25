@@ -17,7 +17,7 @@ Struktur Folder:
 Target:
 
 - [ ] Memahami `react-native` dan `expo`
-- [ ] Install `expo-cli` & `expo init` & setup project mobile
+- [✅] Install `expo-cli` & `expo init` & setup project mobile
 - [ ] Mencoba component Text, View, Image, StyleSheet, Button, ScrollView, FlatList
 - [ ] Mencoba useState, useEffect dalam react-native
 - [ ] Hit API server yang sudah dibuat untuk mendapatkan data
