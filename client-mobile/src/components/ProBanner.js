@@ -6,16 +6,18 @@ const MovieCard = (props) => {
     <View style={styles.banner}>
       <View style={styles.itemLeft}>
         <Text style={styles.square}>PRO</Text>
-        <Text style={styles.cardTitle}>{props.text}</Text>
+        <Text style={styles.itemText}>{props.text}</Text>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  cardTitle: {
+  itemText: {
     color: "black",
     alignItems: "center",
+    justifyContent: "center",
+    maxWidth: "90%",
   },
   banner: {
     backgroundColor: "white",
@@ -28,7 +30,7 @@ const styles = StyleSheet.create({
   itemLeft: {
     flexDirection: "row",
     alignItems: "center",
-    // flexWrap: "wrap",
+    flexWrap: "wrap",
   },
   square: {
     width: 40,
@@ -38,6 +40,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#ff6f00",
     fontWeight: "bold",
+    borderRadius: 5,
+    marginRight: 15,
   },
 });
 

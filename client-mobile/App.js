@@ -7,8 +7,8 @@ export default function App() {
       {/* * Movie List * */}
       <View style={styles.movieWrapper}>
         <Text style={styles.sectionTitle}>Letterboxd</Text>
-        <View style={styles.movies}>
-          {/* * This is where the movie cards will show * */}
+        <View style={styles.banner}>
+          {/* * This is where the banner will show * */}
           <ProBanner
             text={
               "Remove ads, add profile stats, activity and service filters, favorite streaming services and more by upgrading to Pro"
@@ -37,5 +37,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
   },
-  movies: {},
+  banner: {},
 });
