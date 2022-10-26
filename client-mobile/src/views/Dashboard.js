@@ -15,20 +15,26 @@ const Dashboard = () => {
         console.error("Error:", err);
       });
   }, []);
-  console.log(movie);
+  //   console.log(movie);
 
   return (
     <SafeAreaView style={styles.safeAreaDashboard}>
       <View style={styles.itemDashboard}>
         <Text>Movie cards will be here</Text>
-        <FlatList></FlatList>
+        <FlatList>
+
+        </FlatList>
       </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  safeAreaDashboard: {},
-  itemDashboard: {},
+  safeAreaDashboard: {
+    flex: 1
+  },
+  itemDashboard: {
+    position: "relative"
+  },
 });
 export default Dashboard;
