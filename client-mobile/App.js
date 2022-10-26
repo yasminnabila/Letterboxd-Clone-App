@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import Icon from "react-native-ico-material-design";
 import ProBanner from "./src/components/ProBanner";
-import Dashboard from "./src/views/Dashboard";
+import Dashboard from "./src/screens/DashboardScreen";
 
 export default function App() {
   return (
@@ -9,13 +9,8 @@ export default function App() {
       {/* * Movie List * */}
       <View style={styles.movieWrapper}>
         <Text style={styles.sectionTitle}>Letterboxd</Text>
-        <View style={styles.banner}>
-          {/* * This is where the banner will show * */}
-          <ProBanner
-            text={
-              "Remove ads, add profile stats, activity and service filters, favorite streaming services and more by upgrading to Pro"
-            }
-          />
+        <View>
+          <ProBanner />
         </View>
         <View>
           <Dashboard />
@@ -30,17 +25,18 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#000a12",
     alignItems: "center",
-    // justifyContent: "center",
   },
   movieWrapper: {
     textDecorationColor: "white",
     paddingTop: 80,
-    paddingHorizontal: 20,
+    // paddingHorizontal: 20,
+    alignItems: "center",
   },
   sectionTitle: {
     fontSize: 30,
     fontWeight: "bold",
     color: "white",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  banner: {},
 });
