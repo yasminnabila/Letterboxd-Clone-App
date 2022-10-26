@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     textDecorationColor: "white",
     paddingTop: 80,
     alignItems: "center",
-    backgroundColor: "pink",
+    // backgroundColor: "pink",
   },
   sectionTitle: {
     fontSize: 30,
