@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import { useState, useEffect } from "react";
 import { FlatList, SafeAreaView } from "react-native";
 
-const Dashboard = () => {
+export default function DashboardScreen({ navigation }) {
   const [movieData, setMovieData] = useState([]);
   useEffect(() => {
     fetch("https://letterboxd-project.herokuapp.com/public")
@@ -38,7 +38,7 @@ const Dashboard = () => {
       </View>
     </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 18,
     fontWeight: "bold",
-    color: "white"
+    color: "white",
   },
 });
-export default Dashboard;
