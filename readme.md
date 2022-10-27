@@ -1,6 +1,6 @@
 # P3-Challenge-2
 
-UI Library: ...
+UI Library: 
 
 Struktur Folder:
 
@@ -20,27 +20,30 @@ Target:
 - [✅] Install `expo-cli` & `expo init` & setup project mobile
 - [✅] Mencoba component Text, View, Image, StyleSheet, Button, ScrollView, FlatList
 - [✅] Mencoba useState, useEffect dalam react-native
-- [ ] Hit API server yang sudah dibuat untuk mendapatkan data
+- [✅] Hit API server yang sudah dibuat untuk mendapatkan data
 - [ ] Mengetahui bahwa redux & redux-thunk bisa diimplementasi di react-native
 - [✅] Memahami `react-native-navigation`
 - [✅] Memahami Stack Navigation & Tab Navigation
 - [ ] Membuat min 2 Screen (Home, Detail)
 
 **Report:**
-
+- Hari ini saya belajar materi baru, yaitu react-native dan expo. 
+- Pada challenge 1, saya mengambil referensi aplikasi Letterboxd
+- Progress challenge hari ini, saya sudah mencoba implementasi client mobile melalui Expo App di iOS, yaitu membuat home screen dan dashboard. Saya juga sudah berhasil fetch data dari API server heroku dari challenge 1.
 ...
 
 ## W2D3
 
 Target:
 
-- [ ] Memahami React Native Gesture Handler
+- [✅] Memahami React Native Gesture Handler
 - [✅] Memahami NoSQL: Mongodb
-- [ ] Membuat service users dengan Mongodb (Kerjakan di `server/services/users`)
-- [ ] Membuat action pada users: Read, Create & Delete (Update optional)
+- [✅] Membuat service users dengan Mongodb (Kerjakan di `server/services/users`)
+- [✅] Membuat action pada users: Read, Create & Delete (Update optional)
 
 **Report:**
-
+- Hari ini saya belajar react native gesture handler dan Mongodb
+- Progress challenge hari ini, saya mencoba react navigation dengan Bottom Tab. Saya juga belajar styling icon tab tersebut.
 ...
 
 ## W2D4
@@ -55,7 +58,8 @@ Target:
 - [ ] Menjaga relasi User dengan product pada microservice
 
 **Report:**
-
+- Hari ini saya belajar materi baru, yaitu Microservices
+- Progress challenge hari ini, saya membuat server user menggunakan MongoDB. Saya berhasil membuat feature CRD untuk user di database collection Mongo.
 ...
 
 ## W2D5
