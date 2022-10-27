@@ -1,18 +1,18 @@
 [
   {
-    "username": "yasmin",
-    "email": "yasmin@outlook.com",
+    "username": "admin",
+    "email": "admin@outlook.com",
     "password": "12345",
     "role": "Admin",
-    "phoneNumber": "826-860-7599",
+    "phoneNumber": "0878781389",
     "address": "Jakarta"
   },
   {
-    "username": "alul",
-    "email": "alul@outlook.com",
+    "username": "staff",
+    "email": "staff@outlook.com",
     "password": "12345",
     "role": "Staff",
-    "phoneNumber": "448-405-1430",
+    "phoneNumber": "087878193894",
     "address": "Depok"
   },
   {

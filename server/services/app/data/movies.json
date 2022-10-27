@@ -6,7 +6,7 @@
     "imageUrl": "https://media-cache.cinematerial.com/p/500x/nza9lluu/top-gun-maverick-movie-poster.jpg?v=1648561333",
     "rating": 4.1,
     "GenreId": 1,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   },
   {
     "title": "Everything Everywhere All at Once",
@@ -15,7 +15,7 @@
     "imageUrl": "https://media-cache.cinematerial.com/p/500x/ckamivwa/everything-everywhere-all-at-once-movie-poster.jpg?v=1646776812",
     "rating": 4.5,
     "GenreId": 2,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   },
   {
     "title": "5 Centimeters per Second",
@@ -24,7 +24,7 @@
     "imageUrl": "https://cdn.myanimelist.net/images/about_me/ranking_items/9813430-ed832ec8-f93a-40c8-a52a-958abf4b9d80.jpg?t=1655725854",
     "rating": 3.5,
     "GenreId": 3,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   },
   {
     "title": "10 Things I Hate About You",
@@ -33,7 +33,7 @@
     "imageUrl": "https://media-cache.cinematerial.com/p/500x/kuslonid/10-things-i-hate-about-you-movie-poster.jpg?v=1456036365",
     "rating": 4.0,
     "GenreId": 4,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   },
   {
     "title": "Pulp Fiction",
@@ -42,7 +42,7 @@
     "imageUrl": "https://media-cache.cinematerial.com/p/500x/hmc4otl5/pulp-fiction-theatrical-movie-poster.jpg?v=1479233327",
     "rating": 4.3,
     "GenreId": 5,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   },
   {
     "title": "Fyre",
@@ -51,7 +51,7 @@
     "imageUrl": "https://media-cache.cinematerial.com/p/500x/1ibi7lga/fyre-movie-poster.jpg?v=1547179473",
     "rating": 3.3,
     "GenreId": 6,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   },
   {
     "title": "Parasite",
@@ -60,7 +60,7 @@
     "imageUrl": "https://media-cache.cinematerial.com/p/500x/zjfkr4ca/parasite-movie-poster.jpg?v=1565848483",
     "rating": 4.6,
     "GenreId": 7,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   },
   {
     "title": "Turning Red",
@@ -69,7 +69,7 @@
     "imageUrl": "https://media-cache.cinematerial.com/p/500x/blqjyolf/turning-red-movie-poster.jpg?v=1645828325",
     "rating": 3.8,
     "GenreId": 8,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   },
   {
     "title": "Last Night in Soho",
@@ -78,7 +78,7 @@
     "imageUrl": "https://media-cache.cinematerial.com/p/500x/zmyrwuey/last-night-in-soho-movie-poster.jpg?v=1631826157",
     "rating": 3.5,
     "GenreId": 9,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   },
   {
     "title": "1917",
@@ -87,7 +87,7 @@
     "imageUrl": "https://media-cache.cinematerial.com/p/500x/4rhbzbmy/1917-british-movie-poster.jpg?v=1570440224",
     "rating": 4.1,
     "GenreId": 10,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   },
   {
     "title": "Suspiria",
@@ -96,7 +96,7 @@
     "imageUrl": "https://media-cache.cinematerial.com/p/500x/mzat1pqy/suspiria-movie-poster.jpg?v=1456555809",
     "rating": 4.0,
     "GenreId": 11,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   },
   {
     "title": "Whiplash",
@@ -105,6 +105,6 @@
     "imageUrl": "https://media-cache.cinematerial.com/p/500x/xveiw3g3/whiplash-movie-poster.jpg?v=1456046076",
     "rating": 4.4,
     "GenreId": 12,
-    "UserId": 1
+    "userMongoId": "635a26e47cd2a6be17b8d4a5"
   }
 ]
