@@ -16,14 +16,14 @@ Struktur Folder:
 
 Target:
 
-- [ ] Memahami `react-native` dan `expo`
+- [✅] Memahami `react-native` dan `expo`
 - [✅] Install `expo-cli` & `expo init` & setup project mobile
-- [ ] Mencoba component Text, View, Image, StyleSheet, Button, ScrollView, FlatList
-- [ ] Mencoba useState, useEffect dalam react-native
+- [✅] Mencoba component Text, View, Image, StyleSheet, Button, ScrollView, FlatList
+- [✅] Mencoba useState, useEffect dalam react-native
 - [ ] Hit API server yang sudah dibuat untuk mendapatkan data
 - [ ] Mengetahui bahwa redux & redux-thunk bisa diimplementasi di react-native
-- [ ] Memahami `react-native-navigation`
-- [ ] Memahami Stack Navigation & Tab Navigation
+- [✅] Memahami `react-native-navigation`
+- [✅] Memahami Stack Navigation & Tab Navigation
 - [ ] Membuat min 2 Screen (Home, Detail)
 
 **Report:**
@@ -35,7 +35,7 @@ Target:
 Target:
 
 - [ ] Memahami React Native Gesture Handler
-- [ ] Memahami NoSQL: Mongodb
+- [✅] Memahami NoSQL: Mongodb
 - [ ] Membuat service users dengan Mongodb (Kerjakan di `server/services/users`)
 - [ ] Membuat action pada users: Read, Create & Delete (Update optional)
 
