@@ -5,7 +5,7 @@ class movieController {
     try {
       const data = await Movie.findAll({
         include: [
-          { model: User, attributes: ["email"] },
+          // { model: User, attributes: ["email"] },
           { model: Cast, attributes: ["name", "profilePict"] },
           { model: Genre, attributes: ["name"] },
         ],
@@ -90,6 +90,7 @@ class movieController {
         profilePict1,
         profilePict2,
         profilePict3,
+        userMongoId,
       } = req.body;
 
       const createMovie = await Movie.create(
@@ -100,7 +101,8 @@ class movieController {
           imageUrl,
           rating: +rating,
           GenreId: +GenreId,
-          UserId: req.user.id,
+          userMongoId,
+          // UserId: req.user.id,
         },
         {
           transaction: t,
@@ -130,7 +132,7 @@ class movieController {
   static async updateMovie(req, res, next) {
     const t = await sequelize.transaction();
     try {
-      const UserId = req.user.id;
+      // const UserId = req.user.id;
       const id = req.params.id;
       const {
         title,
@@ -145,6 +147,7 @@ class movieController {
         profilePict1,
         profilePict2,
         profilePict3,
+        userMongoId,
       } = req.body;
 
       const data = await Movie.update(
@@ -155,7 +158,8 @@ class movieController {
           imageUrl,
           rating: +rating,
           GenreId: +GenreId,
-          UserId: +UserId,
+          userMongoId,
+          // UserId: +UserId,
         },
         {
           where: {
