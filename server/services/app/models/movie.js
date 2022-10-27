@@ -98,7 +98,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       GenreId: DataTypes.INTEGER,
-      UserId: DataTypes.INTEGER,
+      userMongoId: DataTypes.INTEGER,
     },
     {
       sequelize,
