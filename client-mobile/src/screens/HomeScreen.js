@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#000a12",
     alignItems: "center",
+    justifyContent: "center",
   },
   movieWrapper: {
     // flex: 6,

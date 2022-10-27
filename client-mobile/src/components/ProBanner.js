@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     maxWidth: "90%",
   },
   banner: {
-    backgroundColor: "#90a4ae",
+    backgroundColor: "#607d8b",
     padding: 13,
     marginTop: 20,
     flexDirection: "row",

@@ -39,11 +39,11 @@ export default function BottomTab() {
             iconName = focused ? "ios-person" : "ios-person-outline";
             return <Ionicons name={iconName} size={size} color={color} />;
           }
-
-          // You can return any component that you like here!
         },
-        tabBarActiveTintColor: "tomato",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: "#01579b",
+        tabBarInactiveTintColor: "black",
+        headerShown: false,
+        tabBarStyle: { backgroundColor: "#607d8b" },
       })}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
@@ -59,6 +59,9 @@ const styles = StyleSheet.create({
     flex: 1,
     // alignContent: "center",
     justifyContent: "center",
+  },
+  navigatorTab: {
+    backgroundColor: "#90a4ae",
   },
   containerText: {
     marginTop: 5,
