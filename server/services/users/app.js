@@ -4,11 +4,13 @@ const cors = require("cors");
 const port = 4001;
 const mongoConnection = require("./config/mongo-connection");
 const router = require("./routes");
+const ErrorHandler = require("./middlewares/ErrorHandler");
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/users", router);
+app.use(ErrorHandler);
 
 mongoConnection.connect().then(() => {
   app.listen(port, () => {

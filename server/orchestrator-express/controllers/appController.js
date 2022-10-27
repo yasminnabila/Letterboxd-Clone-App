@@ -1,7 +1,10 @@
 const axios = require("axios");
 const redis = require("../config/redis");
 
-class Controller {
+const APP_URL = "http://localhost:4002/movies";
+const USER_URL = "http://localhost:4000/users"
+
+class appController {
   static async readAllMovies(req, res) {
     try {
       const movies = await redis.get("app:movies");
@@ -28,4 +31,4 @@ class Controller {
   }
 }
 
-module.exports = Controller;
+module.exports = appController;

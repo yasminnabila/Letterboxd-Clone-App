@@ -2,28 +2,26 @@ const { hashedPassword } = require("../helpers/bcryptjs");
 const User = require("../models/user");
 
 class Controller {
-  static async readAllUsers(req, res) {
+  static async readAllUsers(req, res, next) {
     try {
       let data = await User.findAll();
       res.status(200).json(data);
     } catch (error) {
-      // console.log(error);
-      res.status(500).json(error);
+      next(error);
     }
   }
 
-  static async readUserById(req, res) {
+  static async readUserById(req, res, next) {
     try {
       const { id } = req.params;
       const data = await User.findById(id);
       res.status(200).json(data);
     } catch (error) {
-      console.log(error);
-      res.status(500).json(error);
+      next(error);
     }
   }
 
-  static async createNewUser(req, res) {
+  static async createNewUser(req, res, next) {
     try {
       let { username, email, password, phoneNumber, address, role } = req.body;
       // console.log(req.body);
@@ -42,12 +40,11 @@ class Controller {
         message: "User has been created successfully",
       });
     } catch (error) {
-      // console.log(error);
-      res.status(500).json(error);
+      next(error);
     }
   }
 
-  static async deleteUserById(req, res) {
+  static async deleteUserById(req, res, next) {
     try {
       const { id } = req.params;
       const data = await User.destroy(id);
@@ -56,8 +53,7 @@ class Controller {
         message: "User has been deleted successfully",
       });
     } catch (error) {
-      console.log(error);
-      res.status(500).json(error);
+      next(error);
     }
   }
 }
