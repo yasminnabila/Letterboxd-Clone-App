@@ -4,7 +4,7 @@ const { getDB } = require("../config/mongo-connection");
 class User {
   static model() {
     const db = getDB();
-    return db.Collection("users");
+    return db.collection("users");
   }
 
   static async findAll() {
@@ -21,7 +21,7 @@ class User {
 
   static async findById(id) {
     try {
-      const user = this.users();
+      const user = this.model();
       const result = await user.findOne({
         _id: ObjectId(id),
       });
@@ -31,10 +31,10 @@ class User {
     }
   }
 
-  static async create(dataUser) {
+  static async create(data) {
     try {
       const user = this.model();
-      const result = await user.insertOne(dataUser);
+      const result = await user.insertOne(data);
       return result;
     } catch (error) {
       throw error;
