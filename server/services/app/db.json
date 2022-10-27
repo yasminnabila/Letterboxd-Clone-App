@@ -1,0 +1,410 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "username": "yasmin",
+      "email": "yasmin@outlook.com",
+      "password": "12345",
+      "role": "Admin",
+      "phoneNumber": "826-860-7599",
+      "address": "Jakarta"
+    },
+    {
+      "id": 2,
+      "username": "alul",
+      "email": "alul@outlook.com",
+      "password": "12345",
+      "role": "Staff",
+      "phoneNumber": "448-405-1430",
+      "address": "Depok"
+    },
+    {
+      "id": 3,
+      "username": "lany",
+      "email": "lany@outlook.com",
+      "password": "12345",
+      "role": "Customer",
+      "phoneNumber": "386-901-5901",
+      "address": "Jakarta"
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "title": "Top Gun: Maverick",
+      "slug": "top-gun-maverick",
+      "synopsis": "FEEL THE NEED… THE NEED FOR SPEED.\nAfter more than thirty years of service as one of the Navy’s top aviators, and dodging the advancement in rank that would ground him, Pete “Maverick” Mitchell finds himself training a detachment of TOP GUN graduates for a specialized mission the likes of which no living pilot has ever seen. Facing an uncertain future and confronting the ghosts of his past, Maverick is drawn into a confrontation with his own deepest fears, culminating in a mission that demands the ultimate sacrifice from those who will be chosen to fly it.",
+      "trailerUrl": "https://www.youtube.com/embed/giXco2jaZ_4",
+      "imageUrl": "https://media-cache.cinematerial.com/p/500x/nza9lluu/top-gun-maverick-movie-poster.jpg?v=1648561333",
+      "rating": 4.1,
+      "genreId": 1,
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "title": "Everything Everywhere All At Once",
+      "slug": "everything-everywhere-all-at-once",
+      "synopsis": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what’s important to her by connecting with the lives she could have led in other universes.",
+      "trailerUrl": "https://youtu.be/wxN1T1uxQ2g",
+      "imageUrl": "https://media-cache.cinematerial.com/p/500x/ckamivwa/everything-everywhere-all-at-once-movie-poster.jpg?v=1646776812",
+      "rating": 4.5,
+      "genreId": 2,
+      "authorId": 1
+    },
+    {
+      "id": 3,
+      "title": "5 Centimeters per Second",
+      "slug": "5-centimeters-per-second",
+      "synopsis": "Three moments in Takaki’s life: his relationship with Akari and their forced separation; his friendship with Kanae, who is secretly in love with him; the demands and disappointments of adulthood, an unhappy life in a cold city.",
+      "trailerUrl": "https://youtu.be/ANiNAqkuWMY",
+      "imageUrl": "https://cdn.myanimelist.net/images/about_me/ranking_items/9813430-ed832ec8-f93a-40c8-a52a-958abf4b9d80.jpg?t=1655725854",
+      "rating": 3.5,
+      "genreId": 3,
+      "authorId": 1
+    },
+    {
+      "id": 4,
+      "title": "10 Things I Hate About You",
+      "slug": "10-things-i-hate-about-you",
+      "synopsis": "On the first day at his new school, Cameron instantly falls for Bianca, the gorgeous girl of his dreams. The only problem is that Bianca is forbidden to date until her ill-tempered, completely un-dateable older sister Kat goes out, too. In an attempt to solve his problem, Cameron singles out the only guy who could possibly be a match for Kat: a mysterious bad boy with a nasty reputation of his own.",
+      "trailerUrl": "https://youtu.be/Ax8qnxP2TWY",
+      "imageUrl": "https://media-cache.cinematerial.com/p/500x/kuslonid/10-things-i-hate-about-you-movie-poster.jpg?v=1456036365",
+      "rating": 4,
+      "genreId": 4,
+      "authorId": 1
+    },
+    {
+      "id": 5,
+      "title": "Pulp Fiction",
+      "slug": "pulp-fiction",
+      "synopsis": "A burger-loving hit man, his philosophical partner, a drug-addled gangster’s moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
+      "trailerUrl": "https://youtu.be/tGpTpVyI_OQ",
+      "imageUrl": "https://media-cache.cinematerial.com/p/500x/hmc4otl5/pulp-fiction-theatrical-movie-poster.jpg?v=1479233327",
+      "rating": 4.3,
+      "genreId": 5,
+      "authorId": 1
+    },
+    {
+      "id": 6,
+      "title": "Fyre",
+      "slug": "fyre",
+      "synopsis": "He promised supermodels and yachts, but delivered tents and cheese sandwiches. How one man engineered a music festival disaster.",
+      "trailerUrl": "https://youtu.be/uZ0KNVU2fV0",
+      "imageUrl": "https://media-cache.cinematerial.com/p/500x/1ibi7lga/fyre-movie-poster.jpg?v=1547179473",
+      "rating": 3.3,
+      "genreId": 6,
+      "authorId": 1
+    },
+    {
+      "id": 7,
+      "title": "Parasite",
+      "slug": "parasite",
+      "synopsis": "All unemployed, Ki-taek’s family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
+      "trailerUrl": "https://youtu.be/tBfgTZsBeFM",
+      "imageUrl": "https://media-cache.cinematerial.com/p/500x/bqeru2ln/parasite-german-movie-cover.jpg?v=1566751935",
+      "rating": 4.6,
+      "genreId": 7,
+      "authorId": 1
+    },
+    {
+      "id": 8,
+      "title": "Turning Red",
+      "slug": "turning-red",
+      "synopsis": "Thirteen-year-old Mei is experiencing the awkwardness of being a teenager with a twist – when she gets too excited, she transforms into a giant red panda.",
+      "trailerUrl": "https://youtu.be/XdKzUbAiswE",
+      "imageUrl": "https://media-cache.cinematerial.com/p/500x/blqjyolf/turning-red-movie-poster.jpg?v=1645828325",
+      "rating": 3.8,
+      "genreId": 8,
+      "authorId": 1
+    },
+    {
+      "id": 9,
+      "title": "Last Night in Soho",
+      "slug": "last-night-in-soho",
+      "synopsis": "A young girl, passionate about fashion design, is mysteriously able to enter the 1960s where she encounters her idol, a dazzling wannabe singer. But 1960s London is not what it seems, and time seems to be falling apart with shady consequences.",
+      "trailerUrl": "https://youtu.be/XgNrL4Kf7yU",
+      "imageUrl": "https://media-cache.cinematerial.com/p/500x/zmyrwuey/last-night-in-soho-movie-poster.jpg?v=1631826157",
+      "rating": 3.5,
+      "genreId": 9,
+      "authorId": 1
+    },
+    {
+      "id": 10,
+      "title": "1917",
+      "slug": "1917",
+      "synopsis": "At the height of the First World War, two young British soldiers must cross enemy territory and deliver a message that will stop a deadly attack on hundreds of soldiers.",
+      "trailerUrl": "https://youtu.be/gZjQROMAh_s",
+      "imageUrl": "https://media-cache.cinematerial.com/p/500x/4rhbzbmy/1917-british-movie-poster.jpg?v=1570440224",
+      "rating": 4.1,
+      "genreId": 10,
+      "authorId": 1
+    },
+    {
+      "id": 11,
+      "title": "Suspiria",
+      "slug": "suspiria",
+      "synopsis": "From the moment she arrives in Freiberg, Germany, to attend the prestigious Tanz Academy, American ballet-dancer Suzy Bannion senses that something horribly evil lurks within the walls of the age-old institution.",
+      "trailerUrl": "https://youtu.be/x_FfT98QJks",
+      "imageUrl": "https://media-cache.cinematerial.com/p/500x/hzhyfztx/suspiria-swedish-movie-poster.jpg?v=1499626473",
+      "rating": 4,
+      "genreId": 11,
+      "authorId": 1
+    },
+    {
+      "id": 12,
+      "title": "Whiplash",
+      "slug": "whiplash",
+      "synopsis": "Under the direction of a ruthless instructor, a talented young drummer begins to pursue perfection at any cost, even his humanity.",
+      "trailerUrl": "https://youtu.be/Df1xkYYbYrY",
+      "imageUrl": "https://media-cache.cinematerial.com/p/500x/xveiw3g3/whiplash-movie-poster.jpg?v=1456046076",
+      "rating": 4.4,
+      "genreId": 12,
+      "authorId": 1
+    },
+    {
+      "title": "Knives Out",
+      "slug": "knives-out",
+      "authorId": 1,
+      "trailerUrl": "https://youtu.be/sL-9Khv7wa4",
+      "imageUrl": "https://www.zyenhoo.com/wp-content/uploads/2022/05/knivesout2019.jpg",
+      "genreId": "13",
+      "rating": "4.0",
+      "synopsis": "HELL, ANY OF THEM COULD HAVE DONE IT.\nWhen renowned crime novelist Harlan Thrombey is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc is mysteriously enlisted to investigate. From Harlan’s dysfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Harlan’s untimely death.",
+      "id": 13
+    },
+    {
+      "title": "test",
+      "rating": "5",
+      "synopsis": "test",
+      "genreId": "4",
+      "authorId": 1,
+      "imageUrl": "test",
+      "trailerUrl": "a",
+      "id": 14
+    },
+    {
+      "title": "Test",
+      "rating": "5",
+      "synopsis": "testttt",
+      "genreId": "4",
+      "authorId": 1,
+      "imageUrl": "tessssttt",
+      "trailerUrl": "test",
+      "id": 15
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "Action",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 2,
+      "name": "Adventure",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 3,
+      "name": "Animation",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 4,
+      "name": "Comedy",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 5,
+      "name": "Crime",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 6,
+      "name": "Documentary",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 7,
+      "name": "Drama",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 8,
+      "name": "Family",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 9,
+      "name": "Fantasy",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 10,
+      "name": "History",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 11,
+      "name": "Horror",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 12,
+      "name": "Music",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 13,
+      "name": "Mystery",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 14,
+      "name": "Romance",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 15,
+      "name": "Science Fiction",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 16,
+      "name": "Thriller",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 17,
+      "name": "TV Movie",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 18,
+      "name": "War",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "id": 19,
+      "name": "Western",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07"
+    },
+    {
+      "name": "Short",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07",
+      "id": 20
+    },
+    {
+      "name": "Biographical",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07",
+      "id": 21
+    },
+    {
+      "name": "Kids",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07",
+      "id": 22
+    },
+    {
+      "name": "Family",
+      "createdAt": "2022-10-17 13:49:47.388+07",
+      "updatedAt": "2022-10-17 13:49:47.388+07",
+      "id": 23
+    }
+  ],
+  "casts": [
+    {
+      "id": 1,
+      "movieId": 1,
+      "name": "Miles Teller",
+      "profilePict": "https://image.tmdb.org/t/p/w342/cg3LW0xX6RKr8dmescxq1bepcb5.jpg"
+    },
+    {
+      "id": 2,
+      "movieId": 2,
+      "name": "Michelle Yeoh",
+      "profilePict": "https://image.tmdb.org/t/p/w342/wPI2wn6WJEtJr1oAMTLBLh92Ryc.jpg"
+    },
+    {
+      "id": 3,
+      "movieId": 3,
+      "name": "Kenji Mizuhashi",
+      "profilePict": "https://image.tmdb.org/t/p/w342/2ydE4b4j3gFmx7kPPrGOuVyM4DX.jpg"
+    },
+    {
+      "id": 4,
+      "movieId": 4,
+      "name": "Joseph Gordon-Levitt",
+      "profilePict": "https://image.tmdb.org/t/p/w342/dhv9f3AaozOjpvjAwVzOWlmmT2V.jpg"
+    },
+    {
+      "id": 5,
+      "movieId": 5,
+      "name": "Uma Thurman",
+      "profilePict": "https://image.tmdb.org/t/p/w342/tHa7u4ScCm9hwSbwodzj8Jmy3io.jpg"
+    },
+    {
+      "id": 6,
+      "movieId": 6,
+      "name": "Ja Rule",
+      "profilePict": "https://image.tmdb.org/t/p/w342/jiYEwuTCkp0vW14eHLFDRJ9v111.jpg"
+    },
+    {
+      "id": 7,
+      "movieId": 7,
+      "name": "Park So-dam",
+      "profilePict": "https://image.tmdb.org/t/p/w342/gaDnEiMD5PClT9ARg1bSFyexbor.jpg"
+    },
+    {
+      "id": 8,
+      "movieId": 8,
+      "name": "Maitreyi Ramakrishnan",
+      "profilePict": "https://image.tmdb.org/t/p/w342/jBFqjwvngaz6ZXEhNd6dMeZ0W6c.jpg"
+    },
+    {
+      "id": 9,
+      "movieId": 9,
+      "name": "Thomasin McKenzie",
+      "profilePict": "https://image.tmdb.org/t/p/w342/WOpnEFG5Q8LWxP81MtUrskmVox.jpg"
+    },
+    {
+      "id": 10,
+      "movieId": 10,
+      "name": "Andrew Scott",
+      "profilePict": "https://image.tmdb.org/t/p/w342/akbGBP3RI4siNLPr8Pa6YcD2NJt.jpg"
+    },
+    {
+      "id": 11,
+      "movieId": 11,
+      "name": "Jessica Harper",
+      "profilePict": "https://image.tmdb.org/t/p/w342/sSTbKuf4bY83cSRx9lmVdGobcsg.jpg"
+    },
+    {
+      "id": 12,
+      "movieId": 12,
+      "name": "J.K. Simmons",
+      "profilePict": "https://image.tmdb.org/t/p/w342/7kIiPojgSVNRXb5z0hiijcD5LJ6.jpg"
+    }
+  ]
+}

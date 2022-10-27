@@ -1,0 +1,26 @@
+[
+  {
+    "username": "admin",
+    "email": "admin@outlook.com",
+    "password": "12345",
+    "role": "Admin",
+    "phoneNumber": "0878781389",
+    "address": "Jakarta"
+  },
+  {
+    "username": "staff",
+    "email": "staff@outlook.com",
+    "password": "12345",
+    "role": "Staff",
+    "phoneNumber": "087878193894",
+    "address": "Depok"
+  },
+  {
+    "username": "lany",
+    "email": "lany@outlook.com",
+    "password": "12345",
+    "role": "Customer",
+    "phoneNumber": "386-901-5901",
+    "address": "Jakarta"
+  }
+]

@@ -50,16 +50,17 @@ Target:
 
 Target:
 
-- [ ] Membuat Server Baru, Microservices
-- [ ] Memisahkan service user dan app
-- [ ] Membuat Orchestrator-express yang bisa komunikasi ke service user dan app
-- [ ] Memahami cache dalam database
-- [ ] Install dataabase Redis dan menggunakan ioRedis sebagai cache
+- [✅] Membuat Server Baru, Microservices
+- [✅] Memisahkan service user dan app
+- [✅] Membuat Orchestrator-express yang bisa komunikasi ke service user dan app
+- [✅] Memahami cache dalam database
+- [✅] Install dataabase Redis dan menggunakan ioRedis sebagai cache
 - [ ] Menjaga relasi User dengan product pada microservice
 
 **Report:**
 - Hari ini saya belajar materi baru, yaitu Microservices
 - Progress challenge hari ini, saya membuat server user menggunakan MongoDB. Saya berhasil membuat feature CRD untuk user di database collection Mongo.
+- Progress lainnya, saya melakukan setup orchestrator express untuk membuat komunikasi ke service user dan app
 ...
 
 ## W2D5
