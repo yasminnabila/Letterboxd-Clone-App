@@ -12,6 +12,7 @@ class movieController {
       });
       res.status(200).json(data);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
