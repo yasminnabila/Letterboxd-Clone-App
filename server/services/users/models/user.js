@@ -10,7 +10,9 @@ class User {
   static async findAll() {
     try {
       const user = this.model();
-      const result = await user.find().toArray();
+      const result = await user
+        .find({}, { projection: { password: 0 } })
+        .toArray();
       return result;
     } catch (error) {
       throw error;
@@ -51,3 +53,5 @@ class User {
     }
   }
 }
+
+module.exports = User;
