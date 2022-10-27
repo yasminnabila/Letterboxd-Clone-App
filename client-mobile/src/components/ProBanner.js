@@ -1,12 +1,15 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const MovieCard = (props) => {
+const MovieCard = () => {
   return (
     <View style={styles.banner}>
       <View style={styles.itemLeft}>
         <Text style={styles.square}>PRO</Text>
-        <Text style={styles.itemText}>{props.text}</Text>
+        <Text style={styles.itemText}>
+          "Remove ads, add profile stats, activity and service filters, favorite
+          streaming services and more by upgrading to Pro"
+        </Text>
       </View>
     </View>
   );
@@ -20,9 +23,8 @@ const styles = StyleSheet.create({
     maxWidth: "90%",
   },
   banner: {
-    backgroundColor: "white",
-    padding: 15,
-    borderRadius: 10,
+    backgroundColor: "#607d8b",
+    padding: 13,
     marginTop: 20,
     flexDirection: "row",
     alignItems: "center",
@@ -42,6 +44,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     borderRadius: 5,
     marginRight: 15,
+    color: "white",
   },
 });
 
