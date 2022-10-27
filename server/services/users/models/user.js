@@ -4,7 +4,7 @@ const { getDB } = require("../config/mongo-connection");
 class User {
   static model() {
     const db = getDB();
-    return db.Collection("users");
+    return db.collection("users");
   }
 
   static async findAll() {
