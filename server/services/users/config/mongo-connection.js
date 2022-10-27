@@ -5,7 +5,7 @@ const dbName = "letterboxd-DB";
 const client = new MongoClient(uri);
 let db;
 
-async function connect(params) {
+async function connect() {
   try {
     await client.connect();
     console.log("connected to mongodb!");
