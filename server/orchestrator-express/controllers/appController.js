@@ -70,7 +70,7 @@ class appController {
       redis.del("app:movies");
       res.status(201).json(data);
     } catch (error) {
-      console.log(error, "<<<<<");
+      // console.log(error, "<<<<<");
       next(error);
     }
   }
@@ -91,6 +91,52 @@ class appController {
       res.status(200).json(data);
     } catch (error) {
       console.log(error);
+      next(error);
+    }
+  }
+
+  static async updateMovie(req, res, next) {
+    try {
+      const {
+        title,
+        synopsis,
+        trailerUrl,
+        imageUrl,
+        rating,
+        GenreId,
+        name1,
+        name2,
+        name3,
+        profilePict1,
+        profilePict2,
+        profilePict3,
+        userMongoId,
+      } = req.body;
+
+      let { data } = await axios({
+        method: "PUT",
+        url: `${APP_URL}/${req.params.id}`,
+        data: {
+          title,
+          synopsis,
+          trailerUrl,
+          imageUrl,
+          rating,
+          GenreId,
+          name1,
+          name2,
+          name3,
+          profilePict1,
+          profilePict2,
+          profilePict3,
+          userMongoId,
+        },
+      });
+
+      redis.del("app:movies");
+      res.status(200).json(data);
+    } catch (error) {
+      console.log(error, "<<<<<");
       next(error);
     }
   }
