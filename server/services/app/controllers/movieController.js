@@ -3,6 +3,7 @@ const { User, Movie, Cast, Genre, sequelize } = require("../models");
 class movieController {
   static async readAllMovies(req, res, next) {
     try {
+      console.log("masuk sinih");
       const data = await Movie.findAll({
         include: [
           // { model: User, attributes: ["email"] },

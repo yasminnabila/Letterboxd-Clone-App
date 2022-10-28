@@ -11,9 +11,6 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello world!");
-});
 app.use("/", router);
 
 app.listen(port, () => {

@@ -1,17 +1,17 @@
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
+// if (process.env.NODE_ENV !== "production") {
+//   require("dotenv").config();
+// }
 const cors = require("cors");
 const express = require("express");
 const app = express();
-const port = process.env.PORT;
+const port = 4000;
 const router = require("./routes");
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/movies", router);
+app.use("/", router);
 
 app.listen(port, () => {
-  console.log(`Movie server listening on port ${port}`);
+  console.log(`Orchestrator express is listening on port ${port}`);
 });
