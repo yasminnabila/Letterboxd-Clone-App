@@ -3,7 +3,7 @@ const redis = require("../config/redis");
 
 const USER_URL = "http://localhost:4001/users";
 
-class userController {
+class usersController {
   static async readAllUsers(req, res, next) {
     try {
       console.log("masuk user controller");
@@ -84,4 +84,4 @@ class userController {
   }
 }
 
-module.exports = userController;
+module.exports = usersController;
