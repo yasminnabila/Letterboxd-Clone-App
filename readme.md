@@ -1,6 +1,6 @@
 # P3-Challenge-2
 
-UI Library: 
+UI Library:
 
 Struktur Folder:
 
@@ -27,10 +27,11 @@ Target:
 - [ ] Membuat min 2 Screen (Home, Detail)
 
 **Report:**
-- Hari ini saya belajar materi baru, yaitu react-native dan expo. 
+
+- Hari ini saya belajar materi baru, yaitu react-native dan expo.
 - Pada challenge 1, saya mengambil referensi aplikasi Letterboxd
 - Progress challenge hari ini, saya sudah mencoba implementasi client mobile melalui Expo App di iOS, yaitu membuat home screen dan dashboard. Saya juga sudah berhasil fetch data dari API server heroku dari challenge 1.
-...
+  ...
 
 ## W2D3
 
@@ -42,9 +43,10 @@ Target:
 - [✅] Membuat action pada users: Read, Create & Delete (Update optional)
 
 **Report:**
+
 - Hari ini saya belajar react native gesture handler dan Mongodb
 - Progress challenge hari ini, saya mencoba react navigation dengan Bottom Tab. Saya juga belajar styling icon tab tersebut.
-...
+  ...
 
 ## W2D4
 
@@ -55,21 +57,22 @@ Target:
 - [✅] Membuat Orchestrator-express yang bisa komunikasi ke service user dan app
 - [✅] Memahami cache dalam database
 - [✅] Install dataabase Redis dan menggunakan ioRedis sebagai cache
-- [ ] Menjaga relasi User dengan product pada microservice
+- [✅] Menjaga relasi User dengan product pada microservice
 
 **Report:**
+
 - Hari ini saya belajar materi baru, yaitu Microservices
 - Progress challenge hari ini, saya membuat server user menggunakan MongoDB. Saya berhasil membuat feature CRD untuk user di database collection Mongo.
 - Progress lainnya, saya melakukan setup orchestrator express untuk membuat komunikasi ke service user dan app
-...
+  ...
 
 ## W2D5
 
 Target:
 
-- [ ] Memahami GraphQL dan tahu perbedaan dengan RESTful API
+- [✅] Memahami GraphQL dan tahu perbedaan dengan RESTful API
 - [ ] Membuat Orchestrator dengan menggunakan GraphQL
-- [ ] Memahami Typedefs, Resolvers
+- [✅] Memahami Typedefs, Resolvers
 - [ ] Mampu membuat Query dan Mutation
 - [ ] Menggunakan redis pada graphql untuk kebutuhan cache server
 - [ ] Memahami Apollo-Client & Implementasi pada mobile apps
