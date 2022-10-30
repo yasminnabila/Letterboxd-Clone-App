@@ -78,5 +78,20 @@ const userRevolvers = {
         console.log(error);
       }
     },
+    deleteUserById: async (_, args) => {
+      try {
+        const { _id } = args;
+        const { data } = await axios.delete(`${USER_URL}/${_id}`);
+        redis.del("users");
+        return data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
+};
+
+module.exports = {
+  userTypeDefs,
+  userRevolvers,
 };
