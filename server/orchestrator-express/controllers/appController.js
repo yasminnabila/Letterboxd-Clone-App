@@ -29,6 +29,26 @@ class appController {
     }
   }
 
+  static async readOneMovieById(req, res, next) {
+    try {
+      const { data } = await axios({
+        method: "GET",
+        url: `${APP_URL}/${req.params.id}`,
+      });
+
+      const { data: user } = await axios({
+        method: `GET`,
+        url: `${USER_URL}/${data.userMongoId}`,
+      });
+      data.user = user;
+
+      res.status(200).json(data);
+    } catch (error) {
+      console.log(error);
+      next(error);
+    }
+  }
+
   static async createNewMovie(req, res, next) {
     try {
       const {
@@ -75,19 +95,13 @@ class appController {
     }
   }
 
-  static async readOneMovieById(req, res, next) {
+  static async deleteMovieById(req, res, next) {
     try {
+      await redis.del("app:movies");
       const { data } = await axios({
-        method: "GET",
+        method: "DELETE",
         url: `${APP_URL}/${req.params.id}`,
       });
-
-      const { data: user } = await axios({
-        method: `GET`,
-        url: `${USER_URL}/${data.userMongoId}`,
-      });
-      data.user = user;
-
       res.status(200).json(data);
     } catch (error) {
       console.log(error);

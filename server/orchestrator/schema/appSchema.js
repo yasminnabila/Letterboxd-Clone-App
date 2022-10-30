@@ -47,8 +47,8 @@ input MovieContent {
     synopsis: String
     trailerUrl: String
     imageUrl: String
-    rating: String
-    GenreId: Int
+    rating: Int
+    GenreId: ID
     name1: String
     name2: String
     name3: String
