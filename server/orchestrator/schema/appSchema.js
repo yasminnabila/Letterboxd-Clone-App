@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { APP_URL, redis } = require("../config/index");
+const { APP_URL, USER_URL, redis } = require("../config/index");
 
 const movieTypeDevs = `#graphql
 type Cast {
@@ -9,6 +9,15 @@ type Cast {
 
 type Genre {
     name: String
+}
+
+type User {
+  _id: String
+  username: String
+  email: String
+  role: String
+  phoneNumber: String
+  address: String
 }
 
 type Movie {
@@ -25,6 +34,12 @@ type Movie {
     updatedAt: String
     Casts: [Cast]
     Genre: Genre
+    Author: User
+}
+
+type responseCreate {
+    statusCode: Int
+    message: String
 }
 
 input MovieContent {
@@ -45,8 +60,12 @@ input MovieContent {
 
 type Query {
     readAllMovies: [Movie]
-    readOneMovieById(id : ID!): Movie
+    readOneMovieById(id: ID!): Movie
 }
+
+type Mutation {
+    createNewMovie(content: MovieContent) : responseCreate
+  }
 `;
 
 const movieResolvers = {
@@ -67,6 +86,36 @@ const movieResolvers = {
         }
       } catch (err) {
         console.log(err);
+      }
+    },
+    readOneMovieById: async (_, args) => {
+      try {
+        const { id } = args;
+        const { data } = await axios({
+          method: "GET",
+          url: `${APP_URL}/${id}`,
+        });
+        const { data: User } = await axios({
+          method: `GET`,
+          url: `${USER_URL}/${data.userMongoId}`,
+        });
+        data.Author = User;
+        await redis.set(`${APP_URL}/${id}`, JSON.stringify(data));
+        return data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+  Mutation: {
+    createNewMovie: async (_, args) => {
+      try {
+        const { content } = args;
+        const { data } = await axios.post(`${APP_URL}`, content);
+        await redis.del("app:movies");
+        return data;
+      } catch (error) {
+        console.log(error);
       }
     },
   },
