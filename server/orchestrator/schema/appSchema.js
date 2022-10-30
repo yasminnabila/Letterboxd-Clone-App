@@ -3,12 +3,19 @@ const { APP_URL, USER_URL, redis } = require("../config/index");
 
 const movieTypeDevs = `#graphql
 type Cast {
+    id: ID
+    MovieId: ID
     name: String
     profilePict: String
+    createdAt: String
+    updatedAt: String
 }
 
 type Genre {
+    id: ID
     name: String
+    createdAt: String
+    updatedAt: String
 }
 
 type User {
@@ -42,6 +49,11 @@ type responseCreate {
     message: String
 }
 
+type responseDelete {
+    statusCode: Int
+    message: String
+}
+
 input MovieContent {
     title: String
     synopsis: String
@@ -65,6 +77,7 @@ type Query {
 
 type Mutation {
     createNewMovie(content: MovieContent) : responseCreate
+    deleteMovieById(id: ID): responseDelete
   }
 `;
 
@@ -112,6 +125,16 @@ const movieResolvers = {
       try {
         const { content } = args;
         const { data } = await axios.post(`${APP_URL}`, content);
+        await redis.del("app:movies");
+        return data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    deleteMovieById: async (_, args) => {
+      try {
+        const { id } = args;
+        const { data } = await axios.delete(`${APP_URL}/${id}`);
         await redis.del("app:movies");
         return data;
       } catch (error) {
