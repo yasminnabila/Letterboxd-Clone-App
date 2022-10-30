@@ -1,8 +1,7 @@
-const { gql } = require("apollo-server");
 const axios = require("axios");
 const { USER_URL, redis } = require("../config/index");
 
-const userTypeDefs = gql`
+const userTypeDefs = `#graphql
   type User {
     _id: String
     username: String
@@ -21,8 +20,8 @@ const userTypeDefs = gql`
   }
 
   type Query {
-    getUsers: [User]
-    getUserById(_id: String!): User
+    readAllUsers: [User]
+    readUserById(_id: String!): User
   }
 
   type Message {
@@ -30,12 +29,12 @@ const userTypeDefs = gql`
   }
 
   type Mutation {
-    createUser(content: UserContent): Message
-    deleteUser(_id: String!): Message
+    createNewUser(content: UserContent): Message
+    deleteUserById(_id: String!): Message
   }
 `;
 
-const userRevolvers = {
+const userResolvers = {
   Query: {
     readAllUsers: async () => {
       try {
@@ -93,5 +92,5 @@ const userRevolvers = {
 
 module.exports = {
   userTypeDefs,
-  userRevolvers,
+  userResolvers,
 };
