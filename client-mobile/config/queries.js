@@ -16,6 +16,11 @@ export const FETCH_MOVIES = gql`
         name
       }
     }
+  }
+`;
+
+export const FETCH_GENRES = gql`
+  query Query {
     readAllGenres {
       id
       name

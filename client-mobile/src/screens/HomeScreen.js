@@ -2,7 +2,7 @@ import * as React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import ProBanner from "../components/ProBanner";
-import DashboardScreen from "../screens/DashboardScreen";
+import PopularMovie from "../components/PopularMovie";
 
 export default function HomeScreen() {
   return (
@@ -14,7 +14,7 @@ export default function HomeScreen() {
           <ProBanner />
         </View>
         <View>
-          <DashboardScreen />
+          <PopularMovie />
         </View>
       </View>
     </View>
