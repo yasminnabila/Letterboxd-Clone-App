@@ -73,6 +73,7 @@ input MovieContent {
 type Query {
     readAllMovies: [Movie]
     readOneMovieById(id: ID!): Movie
+    readAllGenres: [Genre]
 }
 
 type Mutation {
@@ -114,6 +115,17 @@ const movieResolvers = {
         });
         data.Author = User;
         await redis.set(`${APP_URL}/${id}`, JSON.stringify(data));
+        return data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    readAllGenres: async () => {
+      try {
+        const { data } = await axios({
+          method: "GET",
+          url: `${APP_URL}/genres`,
+        });
         return data;
       } catch (error) {
         console.log(error);
