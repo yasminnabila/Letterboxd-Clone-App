@@ -1,10 +1,26 @@
-import * as React from "react";
 import { StyleSheet, Text, View } from "react-native";
-
+import { useCallback } from "react";
+import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
 import ProBanner from "../components/ProBanner";
 import PopularMovie from "../components/PopularMovie";
+import colors from "../../assets/colors/colors";
 
 export default function HomeScreen() {
+  const [fontsLoaded] = useFonts({
+    "Montserrat-ExtraBold": require("../../assets/fonts/Montserrat-ExtraBold.ttf"),
+  });
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       {/* * Movie List * */}
@@ -24,22 +40,21 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#000a12",
+    backgroundColor: colors.background,
     alignItems: "center",
     justifyContent: "center",
   },
   movieWrapper: {
-    // flex: 6,
     textDecorationColor: "white",
     paddingTop: 80,
     alignItems: "center",
-    // backgroundColor: "pink",
   },
   sectionTitle: {
     fontSize: 30,
     fontWeight: "bold",
-    color: "white",
+    color: colors.textLight,
     alignItems: "center",
     justifyContent: "center",
+    fontFamily: "Montserrat-ExtraBold",
   },
 });

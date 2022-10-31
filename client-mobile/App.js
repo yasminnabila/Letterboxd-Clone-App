@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import BottomTab from "./src/navigation/BottomTab";
-import client from "./config/apollo-connection"
+import BottomTab from "./src/navigation/BottomTabNavigator";
+import client from "./config/apollo-connection";
 import { ApolloProvider } from "@apollo/client";
+import "react-native-gesture-handler";
 
 export default function App() {
   return (
@@ -19,6 +20,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
   },
 });

@@ -72,7 +72,7 @@ input MovieContent {
 
 type Query {
     readAllMovies: [Movie]
-    readOneMovieById(id: ID!): Movie
+    readOneMovie(id: ID!): Movie
     readAllGenres: [Genre]
 }
 
@@ -102,7 +102,7 @@ const movieResolvers = {
         console.log(err);
       }
     },
-    readOneMovieById: async (_, args) => {
+    readOneMovie: async (_, args) => {
       try {
         const { id } = args;
         const { data } = await axios({

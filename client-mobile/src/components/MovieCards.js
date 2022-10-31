@@ -1,9 +1,17 @@
 import { TouchableOpacity, Text, StyleSheet, View, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-export default function MovieCards({ movie, navigation }) {
+export default function MovieCards({ movie }) {
+  const navigation = useNavigation();
   return (
     <>
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate("Detail", {
+            id: movie.id,
+          })
+        }
+      >
         <View style={styles.card}>
           <Image
             source={{ uri: movie.imageUrl }}

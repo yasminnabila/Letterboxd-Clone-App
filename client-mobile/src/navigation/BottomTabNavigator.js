@@ -9,6 +9,7 @@ import HomeScreen from "../screens/HomeScreen";
 import ActivityScreen from "../screens/ActivityScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import SearchScreen from "../screens/SearchScreen";
+import StackNavigator from "./StackNavigator";
 
 //? INVOKE TAB NAVIGATOR
 const Tab = createBottomTabNavigator();
@@ -20,7 +21,7 @@ export default function BottomTab() {
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
-          if (route.name === "Home") {
+          if (route.name === "Dashboard") {
             iconName = "page-multiple";
             return <Foundation name={iconName} size={size} color={color} />;
           } else if (route.name === "Search") {
@@ -46,7 +47,7 @@ export default function BottomTab() {
         tabBarStyle: { backgroundColor: "#607d8b" },
       })}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Dashboard" component={StackNavigator} />
       <Tab.Screen name="Search" component={SearchScreen} />
       <Tab.Screen name="Activity" component={ActivityScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />

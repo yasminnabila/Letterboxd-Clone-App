@@ -5,7 +5,6 @@ import { FlatList, SafeAreaView } from "react-native";
 import MovieCards from "./MovieCards";
 
 export default function PopularMovie({ navigation }) {
-
   const { loading, error, data: movieData } = useQuery(FETCH_MOVIES);
 
   // console.log(loading, error, movieData, "<<<<");
@@ -20,7 +19,7 @@ export default function PopularMovie({ navigation }) {
         <Text style={styles.movieText}>Popular this week</Text>
         <FlatList
           horizontal={true}
-          data={movieData.readAllMovies}
+          data={movieData?.readAllMovies}
           renderItem={({ item }) => {
             return (
               <MovieCards movie={item} key={item.id} navigation={navigation} />

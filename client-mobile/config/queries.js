@@ -29,8 +29,8 @@ export const FETCH_GENRES = gql`
 `;
 
 export const FETCH_MOVIE_DETAIL = gql`
-  query Query($readOneMovieByIdId: ID!) {
-    readOneMovieById(id: $readOneMovieByIdId) {
+  query Query($readOneMovieId: ID!) {
+    readOneMovie(id: $readOneMovieId) {
       id
       title
       synopsis
@@ -39,15 +39,15 @@ export const FETCH_MOVIE_DETAIL = gql`
       rating
       GenreId
       userMongoId
+      Casts {
+        id
+        MovieId
+        name
+        profilePict
+      }
       Genre {
         id
         name
-      }
-      Casts {
-        id
-        name
-        profilePict
-        MovieId
       }
       Author {
         _id
