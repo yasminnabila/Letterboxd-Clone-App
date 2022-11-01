@@ -1,6 +1,5 @@
 const { MongoClient } = require("mongodb");
-const uri =
-  "mongodb+srv://yasminnabila:yasmin12345@jakarta.y0bydzc.mongodb.net/test";
+const uri = process.env.MONGO_DB_URI;
 const dbName = "letterboxd-DB";
 const client = new MongoClient(uri);
 let db;
@@ -8,7 +7,6 @@ let db;
 async function connect() {
   try {
     await client.connect();
-    console.log("connected to mongodb!");
     const dbConnection = client.db(dbName);
     db = dbConnection;
     return dbConnection;
