@@ -32,7 +32,7 @@ class Controller {
         password,
         phoneNumber,
         address,
-        role,
+        role: "Admin",
       };
       const newUser = await User.create(data);
       res.status(201).json({

@@ -5,11 +5,7 @@ class movieController {
     try {
       console.log("masuk sinih");
       const data = await Movie.findAll({
-        include: [
-          // { model: User, attributes: ["email"] },
-          { model: Cast, attributes: ["name", "profilePict"] },
-          { model: Genre, attributes: ["name"] },
-        ],
+        include: [Genre, Cast],
       });
       res.status(200).json(data);
     } catch (error) {

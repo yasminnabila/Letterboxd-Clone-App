@@ -59,7 +59,6 @@ class usersController {
 
       redis.del("users");
       res.status(201).json({
-        statusCode: 200,
         message: "User has been created successfully",
       });
     } catch (error) {
@@ -75,7 +74,6 @@ class usersController {
       });
       redis.del("users");
       res.status(200).json({
-        statusCode: 200,
         message: "User has been deleted successfully",
       });
     } catch (error) {
