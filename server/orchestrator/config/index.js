@@ -1,5 +1,5 @@
-const APP_URL = "http://localhost:4002/movies";
-const USER_URL = "http://localhost:4001/users";
+const APP_URL = "https://letterboxd-server-app.herokuapp.com/movies";
+const USER_URL = "https://letterboxd-server-users.herokuapp.com/users";
 const Redis = require("ioredis");
 const redis = new Redis({
   port: 12748, // Redis port
