@@ -8,6 +8,7 @@ import {
   Image,
   Linking,
   ActivityIndicator,
+  Container,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
