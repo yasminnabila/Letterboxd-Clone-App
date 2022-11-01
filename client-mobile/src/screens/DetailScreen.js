@@ -12,11 +12,29 @@ import {
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import colors from "../../assets/colors/colors";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import {
+  FlatList,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native-gesture-handler";
 
 export default function DetailScreen({ route, navigation }) {
   const { id } = route.params;
-  console.log(id, "ini id movie");
+  const renderCastItem = ({ item }) => {
+    // console.log(item.profilePict, "<< ini render casts");
+    return (
+      <View style={styles.castItemWrapper}>
+        <Image
+          source={{
+            uri: item?.profilePict,
+          }}
+          style={styles.castImage}
+        />
+        <Text style={styles.castName}>{item?.name}</Text>
+      </View>
+    );
+  };
+
   const {
     loading,
     error,
@@ -25,7 +43,10 @@ export default function DetailScreen({ route, navigation }) {
     variables: { readOneMovieId: id },
   });
   let dataDetail = movieDetail?.readOneMovie;
-  let movieTrailer = movieDetail?.readOneMovie?.trailer;
+  let castDetail = dataDetail?.Casts;
+  let author = dataDetail?.Author;
+  let movieTrailer = movieDetail?.readOneMovie?.trailerUrl;
+  console.log(author.email, "<<<<");
   // console.log(dataDetail, "ini variabel dataDetail")
 
   if (loading) {
@@ -52,7 +73,7 @@ export default function DetailScreen({ route, navigation }) {
     );
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text>Ini Detail Screen!</Text>
       <SafeAreaView>
         {/* Header */}
@@ -84,14 +105,18 @@ export default function DetailScreen({ route, navigation }) {
 
             <View style={styles.movieDetailWrapper}>
               {/* Genre */}
-              <View style={styles.movieDetailItem}>
-                <Text style={styles.genre}>{dataDetail?.Genre?.name}</Text>
+              <View style={styles.movieDetailContainer}>
+                <Text style={styles.movieDetailItem}>
+                  {dataDetail?.Genre?.name}
+                </Text>
                 {/* <Text style={styles.genre}>Romantic</Text> */}
               </View>
 
               {/* Rating */}
-              <View style={styles.movieDetailItem}>
-                <Text style={styles.genre}>{dataDetail?.rating}/5</Text>
+              <View style={styles.movieDetailContainer}>
+                <Text style={styles.movieDetailItem}>
+                  {dataDetail?.rating}/5
+                </Text>
                 {/* <Text style={styles.genre}>4/5</Text> */}
               </View>
             </View>
@@ -114,7 +139,7 @@ export default function DetailScreen({ route, navigation }) {
               </Text> */}
               <Text
                 style={styles.trailer}
-                onPress={() => Linking.openURL("movieTrailer")}
+                onPress={() => Linking.openURL(movieTrailer)}
               >
                 TRAILER
               </Text>
@@ -142,7 +167,27 @@ export default function DetailScreen({ route, navigation }) {
       <View style={styles.synopsisWrapper}>
         <Text style={styles.synopsis}>{dataDetail?.synopsis}</Text>
       </View>
-    </View>
+
+      {/* Casts */}
+      <View style={styles.castsWrapper}>
+        <Text style={styles.castsTitle}>Cast</Text>
+        <View style={styles.castListWrapper}>
+          <FlatList
+            data={dataDetail.Casts}
+            renderItem={renderCastItem}
+            horizontal={true}
+            keyExtractor={(item) => item.id}
+            showsHorizontalScrollIndicator={false}
+          ></FlatList>
+        </View>
+      </View>
+
+      {/* Author */}
+
+      {/* <View style={styles.authorWrapper}>
+        <Text style={styles.authorName}>Written by: {author.email}</Text>
+      </View> */}
+    </ScrollView>
   );
 }
 
@@ -185,16 +230,17 @@ const styles = StyleSheet.create({
   },
   title: {
     color: colors.textGrey,
-    fontSize: 25,
+    fontSize: 32,
     fontWeight: "bold",
-    width: "90%",
+    width: "98%",
   },
-  movieDetailItem: {
+  movieDetailContainer: {
     marginTop: 20,
     paddingHorizontal: 20,
   },
-  genre: {
+  movieDetailItem: {
     color: colors.textGrey,
+    fontSize: 15,
   },
   movieDetailWrapper: {
     flexDirection: "row",
@@ -216,6 +262,7 @@ const styles = StyleSheet.create({
   },
   trailerWrapper: {
     backgroundColor: "gray",
+    padding: 5,
     borderRadius: 90,
     marginTop: 30,
     marginLeft: 20,
@@ -227,5 +274,48 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: colors.textLight,
     marginLeft: 5,
+    fontWeight: "bold",
+  },
+  castsWrapper: {
+    marginTop: 40,
+  },
+  castsTitle: {
+    paddingHorizontal: 20,
+    color: colors.textGrey,
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  castListWrapper: {
+    paddingHorizontal: 20,
+  },
+  castItemWrapper: {
+    marginTop: 10,
+    backgroundColor: colors.textLight,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 10,
+    marginRight: 15,
+    borderRadius: 15,
+    elevation: 2,
+    marginLeft: 5,
+  },
+  castImage: {
+    width: 120,
+    height: 170,
+  },
+  castName: {
+    color: colors.background,
+    alignItems: "center",
+    justifyContent: "center",
+    fontWeight: "bold",
+    marginTop: 10,
+  },
+  authorWrapper: {
+    paddingHorizontal: 20,
+    marginTop: 30,
+  },
+  authorName: {
+    color: colors.author,
+    fontSize: 12,
   },
 });

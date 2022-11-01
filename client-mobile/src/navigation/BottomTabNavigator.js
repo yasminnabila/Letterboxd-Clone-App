@@ -10,6 +10,7 @@ import ActivityScreen from "../screens/ActivityScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import SearchScreen from "../screens/SearchScreen";
 import StackNavigator from "./StackNavigator";
+import colors from "../../assets/colors/colors";
 
 //? INVOKE TAB NAVIGATOR
 const Tab = createBottomTabNavigator();
@@ -24,32 +25,35 @@ export default function BottomTab() {
           if (route.name === "Dashboard") {
             iconName = "page-multiple";
             return <Foundation name={iconName} size={size} color={color} />;
-          } else if (route.name === "Search") {
-            iconName = focused ? "search-sharp" : "search-outline";
-            return <Ionicons name={iconName} size={size} color={color} />;
-          } else if (route.name === "Activity") {
-            iconName = focused ? "lightning-bolt" : "lightning-bolt-outline";
-            return (
-              <MaterialCommunityIcons
-                name={iconName}
-                size={size}
-                color={color}
-              />
-            );
-          } else if (route.name === "Profile") {
+          } 
+          // else if (route.name === "Search") {
+          //   iconName = focused ? "search-sharp" : "search-outline";
+          //   return <Ionicons name={iconName} size={size} color={color} />;
+          // } 
+          // else if (route.name === "Activity") {
+          //   iconName = focused ? "lightning-bolt" : "lightning-bolt-outline";
+          //   return (
+          //     <MaterialCommunityIcons
+          //       name={iconName}
+          //       size={size}
+          //       color={color}
+          //     />
+          //   );
+          // } 
+          else if (route.name === "Profile") {
             iconName = focused ? "ios-person" : "ios-person-outline";
             return <Ionicons name={iconName} size={size} color={color} />;
           }
         },
-        tabBarActiveTintColor: "#01579b",
+        tabBarActiveTintColor: colors.textLight,
         tabBarInactiveTintColor: "black",
         headerShown: false,
         tabBarStyle: { backgroundColor: "#607d8b" },
       })}
     >
       <Tab.Screen name="Dashboard" component={StackNavigator} />
-      <Tab.Screen name="Search" component={SearchScreen} />
-      <Tab.Screen name="Activity" component={ActivityScreen} />
+      {/* <Tab.Screen name="Search" component={SearchScreen} />
+      <Tab.Screen name="Activity" component={ActivityScreen} /> */}
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
