@@ -43,10 +43,9 @@ export default function DetailScreen({ route, navigation }) {
     variables: { readOneMovieId: id },
   });
   let dataDetail = movieDetail?.readOneMovie;
-  let castDetail = dataDetail?.Casts;
   let author = dataDetail?.Author;
   let movieTrailer = movieDetail?.readOneMovie?.trailerUrl;
-  console.log(author.email, "<<<<");
+  console.log(dataDetail?.Author?.email, "<<<<");
   // console.log(dataDetail, "ini variabel dataDetail")
 
   if (loading) {
@@ -74,7 +73,6 @@ export default function DetailScreen({ route, navigation }) {
 
   return (
     <ScrollView style={styles.container}>
-      <Text>Ini Detail Screen!</Text>
       <SafeAreaView>
         {/* Header */}
         <View style={styles.headerWrapper}>
@@ -184,9 +182,11 @@ export default function DetailScreen({ route, navigation }) {
 
       {/* Author */}
 
-      {/* <View style={styles.authorWrapper}>
-        <Text style={styles.authorName}>Written by: {author.email}</Text>
-      </View> */}
+      <View style={styles.authorWrapper}>
+        <Text style={styles.authorName}>
+          Written by: {dataDetail?.Author?.email}
+        </Text>
+      </View>
     </ScrollView>
   );
 }
