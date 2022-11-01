@@ -7,11 +7,28 @@ import MovieCards from "./MovieCards";
 export default function PopularMovie({ navigation }) {
   const { loading, error, data: movieData } = useQuery(FETCH_MOVIES);
 
-  // console.log(loading, error, movieData, "<<<<");
-
   if (loading) {
-    return <ActivityIndicator />;
+    return (
+      <ActivityIndicator
+        marginTop={400}
+        size={"large"}
+        color={"rgb(42, 104, 76)"}
+      />
+    );
   }
+
+  if (error)
+    return (
+      <SafeAreaView>
+        <View style={{ flexDirection: "row" }}>
+          <Container marginY={100} marginX={75} backgroundColor="red.400">
+            <Box backgroundColor={"Red"}>
+              <Text> Oops! Something's wrong! {error.message} </Text>
+            </Box>
+          </Container>
+        </View>
+      </SafeAreaView>
+    );
 
   return (
     <SafeAreaView style={styles.container}>

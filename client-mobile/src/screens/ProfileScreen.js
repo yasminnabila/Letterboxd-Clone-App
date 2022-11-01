@@ -1,21 +1,30 @@
-import { View, Text, StyleSheet, Image, SafeAreaView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  SafeAreaView,
+  ActivityIndicator,
+} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import colors from "../../assets/colors/colors";
 import { Ionicons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
-import Avatar from "../../assets/images/avatar.png";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Avatar from "../../assets/images/avatar.png";
+import colors from "../../assets/colors/colors";
 import poster_1 from "../../assets/images/poster_1.jpeg";
 import poster_2 from "../../assets/images/poster_2.jpeg";
 import poster_3 from "../../assets/images/poster_3.jpeg";
 import poster_4 from "../../assets/images/poster_4.jpeg";
-import activity_1 from "../../assets/images/activity_1.jpeg"
+import activity_1 from "../../assets/images/activity_1.jpeg";
 import activity_2 from "../../assets/images/activity_2.jpeg";
 import activity_3 from "../../assets/images/activity_3.jpeg";
-import activity_4 from "../../assets/images/activity_4.jpeg"
+import activity_4 from "../../assets/images/activity_4.jpeg";
+import { useState } from "react";
+import ProBanner from "../components/ProBanner";
 
-export default function ProfileScreen({ navigation }) {
+export default function ProfileScreen({}) {
   return (
     <ScrollView style={styles.container}>
       <SafeAreaView>
@@ -39,6 +48,11 @@ export default function ProfileScreen({ navigation }) {
           </View>
         </View>
 
+        {/* Pro Banner */}
+        <View>
+          <ProBanner />
+        </View>
+
         {/* Profile Pict */}
         <View style={styles.avatarWrapper}>
           <Image style={styles.avatarImage} source={Avatar} />
@@ -60,7 +74,9 @@ export default function ProfileScreen({ navigation }) {
 
         {/* Bio */}
         <View style={styles.bioWrapper}>
-          <Text style={{ color: "gray" }}>Favorites: horror</Text>
+          <Text style={{ color: "gray", marginBottom: 3 }}>
+            Favorites: horror
+          </Text>
           <Text style={{ color: "gray" }}>
             #horror and classic film enthusiast
           </Text>
@@ -74,12 +90,12 @@ export default function ProfileScreen({ navigation }) {
         </View>
 
         {/* Favorites */}
-        <Text style={styles.favoriteFilmText}>FAVORITES</Text>
-        <View style={styles.favoriteFilmWrapper}>
-          <Image style={styles.favoriteFilmImage} source={poster_1} />
-          <Image style={styles.favoriteFilmImage} source={poster_2} />
-          <Image style={styles.favoriteFilmImage} source={poster_3} />
-          <Image style={styles.favoriteFilmImage} source={poster_4} />
+        <Text style={styles.movieCardText}>FAVORITES</Text>
+        <View style={styles.movieCardWrapper}>
+          <ImageLoader style={styles.favoriteFilmImage} source={poster_1} />
+          <ImageLoader style={styles.favoriteFilmImage} source={poster_2} />
+          <ImageLoader style={styles.favoriteFilmImage} source={poster_3} />
+          <ImageLoader style={styles.favoriteFilmImage} source={poster_4} />
         </View>
 
         {/* Divider Line */}
@@ -90,15 +106,34 @@ export default function ProfileScreen({ navigation }) {
         </View>
 
         {/* Recent Activity */}
-        <Text style={styles.favoriteFilmText}>RECENT ACTIVITY</Text>
-        <View style={styles.favoriteFilmWrapper}>
-          <Image style={styles.favoriteFilmImage} source={activity_1} />
-          <Image style={styles.favoriteFilmImage} source={activity_2} />
-          <Image style={styles.favoriteFilmImage} source={activity_3} />
-          <Image style={styles.favoriteFilmImage} source={activity_4} />
+        <Text style={styles.movieCardText}>RECENT ACTIVITY</Text>
+        <View style={styles.movieCardWrapper}>
+          <ImageLoader style={styles.favoriteFilmImage} source={activity_1} />
+          <ImageLoader style={styles.favoriteFilmImage} source={activity_2} />
+          <ImageLoader style={styles.favoriteFilmImage} source={activity_3} />
+          <ImageLoader style={styles.favoriteFilmImage} source={activity_4} />
         </View>
       </SafeAreaView>
     </ScrollView>
+  );
+}
+
+function ImageLoader({ source }) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <>
+      <Image
+        onLoad={() => setLoaded(true)}
+        style={styles.favoriteFilmImage}
+        source={source}
+      />
+      {!loaded ? (
+        <ActivityIndicator
+          style={{ position: "absolute", top: 50, left: 20, right: 20 }}
+        />
+      ) : null}
+    </>
   );
 }
 
@@ -112,7 +147,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
-    paddingTop: 30,
+    paddingTop: 5,
   },
   usernameWrapper: {
     paddingHorizontal: 20,
@@ -135,8 +170,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   avatarImage: {
-    width: 150,
-    height: 150,
+    width: 100,
+    height: 100,
   },
   profileIconWrapper: {
     flexDirection: "row",
@@ -169,9 +204,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 20,
-    marginTop: 20,
+    marginTop: 5,
   },
-  favoriteFilmWrapper: {
+  movieCardWrapper: {
     marginTop: 10,
     alignItems: "center",
     justifyContent: "center",
@@ -183,12 +218,12 @@ const styles = StyleSheet.create({
     width: 95,
     height: 150,
     padding: 15,
-    // margin: 5
+    backgroundColor: "#607d8b",
   },
-  favoriteFilmText: {
+  movieCardText: {
     color: colors.textGrey,
     fontSize: 15,
     paddingHorizontal: 20,
-    padding: 10
+    padding: 10,
   },
 });

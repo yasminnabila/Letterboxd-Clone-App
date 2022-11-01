@@ -2,7 +2,6 @@ import { StyleSheet, Image, Text, View } from "react-native";
 import { useCallback } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-import ProBanner from "../components/ProBanner";
 import PopularMovie from "../components/PopularMovie";
 import colors from "../../assets/colors/colors";
 import { ScrollView } from "react-native-gesture-handler";

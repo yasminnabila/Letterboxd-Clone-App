@@ -43,7 +43,6 @@ export default function DetailScreen({ route, navigation }) {
     variables: { readOneMovieId: id },
   });
   let dataDetail = movieDetail?.readOneMovie;
-  let author = dataDetail?.Author;
   let movieTrailer = movieDetail?.readOneMovie?.trailerUrl;
   console.log(dataDetail?.Author?.email, "<<<<");
   // console.log(dataDetail, "ini variabel dataDetail")
@@ -201,7 +200,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
-    paddingTop: 20,
+    paddingTop: 10,
   },
   headerLeft: {
     borderColor: colors.borderGrey,
@@ -256,8 +255,8 @@ const styles = StyleSheet.create({
   synopsis: {
     marginTop: 30,
     paddingHorizontal: 20,
-    color: colors.textGrey,
-    fontSize: 16,
+    color: colors.textLight,
+    fontSize: 15,
     justifyContent: "center",
   },
   trailerWrapper: {
@@ -281,7 +280,7 @@ const styles = StyleSheet.create({
   },
   castsTitle: {
     paddingHorizontal: 20,
-    color: colors.textGrey,
+    color: colors.textLight,
     fontSize: 20,
     fontWeight: "bold",
   },
@@ -290,25 +289,26 @@ const styles = StyleSheet.create({
   },
   castItemWrapper: {
     marginTop: 10,
-    backgroundColor: colors.textLight,
+    backgroundColor: "#607d8b",
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
     marginRight: 15,
-    borderRadius: 15,
+    borderRadius: 7,
     elevation: 2,
     marginLeft: 5,
   },
   castImage: {
     width: 120,
     height: 170,
+    borderRadius: 5,
   },
   castName: {
     color: colors.background,
     alignItems: "center",
     justifyContent: "center",
     fontWeight: "bold",
-    marginTop: 10,
+    padding: 7,
   },
   authorWrapper: {
     paddingHorizontal: 20,
@@ -317,5 +317,6 @@ const styles = StyleSheet.create({
   authorName: {
     color: colors.author,
     fontSize: 12,
+    marginBottom: 10,
   },
 });
