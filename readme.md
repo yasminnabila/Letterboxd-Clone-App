@@ -8,7 +8,7 @@ Users can see all list of movies and see each movie in detail.
 
 ## Demo
 
-https://user-images.githubusercontent.com/108170309/204281214-73c52f94-6710-4f1c-b29a-a31712c46461.mp4
+[Letterboxd mobile preview](https://user-images.githubusercontent.com/108170309/204281214-73c52f94-6710-4f1c-b29a-a31712c46461.mp4)
 
 ## Stack
 <a name="stack"></a>
