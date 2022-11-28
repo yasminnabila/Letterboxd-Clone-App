@@ -8,7 +8,7 @@ Users can see all list of movies and see each movie in detail.
 
 ## Demo
 
-[Letterboxd mobile preview](https://user-images.githubusercontent.com/108170309/204281214-73c52f94-6710-4f1c-b29a-a31712c46461.mp4)
+https://user-images.githubusercontent.com/108170309/204283821-62f82d0a-8a42-4785-80fa-e0680798c188.mp4
 
 ## Stack
 <a name="stack"></a>
@@ -16,8 +16,7 @@ Users can see all list of movies and see each movie in detail.
 ### Frontend
 * [React Native](https://reactnative.dev/) to compose the UI
 * [Apollo Client](https://www.apollographql.com/docs/react/) to communicate with the GraphQL server and manage the data fetching declaratively
-* [Bootstrap CSS](https://react-bootstrap.github.io/) to help with the styling and accessibility
-* [Vite](https://vitejs.dev/) to improve bundling and development
+* [Expo](https://expo.dev/) to host the app on IoS
 
 ### Backend
 * [NodeJS](https://nodejs.org/en/) to run the server
