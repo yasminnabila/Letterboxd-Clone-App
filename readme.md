@@ -1,94 +1,31 @@
-# P3-Challenge-2
+# Letterboxd Clone (Mobile App)
 
-UI Library:
+This is a mobile application based on Letterboxd, uses primarly JavaScript both on the frontend and backend. Data about movies and casts are stored on MongoDB Atlas. You can find more about the stack <a href="#stack">here</a>.
 
-Struktur Folder:
+## Key Features
 
-- client-mobile
-- server
-  - orchestrator (port: 4000)
-  - orchestrator-express (port: 4000)
-  - services
-    - users - mongodb (port: 4001)
-    - app - postgres (port: 4002)
+Users can see all list of movies and see each movie in detail.
 
-## W2D2
+## Demo
 
-Target:
+https://user-images.githubusercontent.com/108170309/204281214-73c52f94-6710-4f1c-b29a-a31712c46461.mp4
 
-- [✅] Memahami `react-native` dan `expo`
-- [✅] Install `expo-cli` & `expo init` & setup project mobile
-- [✅] Mencoba component Text, View, Image, StyleSheet, Button, ScrollView, FlatList
-- [✅] Mencoba useState, useEffect dalam react-native
-- [✅] Hit API server yang sudah dibuat untuk mendapatkan data
-- [✅] Mengetahui bahwa redux & redux-thunk bisa diimplementasi di react-native
-- [✅] Memahami `react-native-navigation`
-- [✅] Memahami Stack Navigation & Tab Navigation
-- [✅] Membuat min 2 Screen (Home, Detail)
+## Stack
+<a name="stack"></a>
 
-**Report:**
+### Frontend
+* [React Native](https://reactnative.dev/) to compose the UI
+* [Apollo Client](https://www.apollographql.com/docs/react/) to communicate with the GraphQL server and manage the data fetching declaratively
+* [Bootstrap CSS](https://react-bootstrap.github.io/) to help with the styling and accessibility
+* [Vite](https://vitejs.dev/) to improve bundling and development
 
-- Hari ini saya belajar materi baru, yaitu react-native dan expo.
-- Pada challenge 1, saya mengambil referensi aplikasi Letterboxd
-- Progress challenge hari ini, saya sudah mencoba implementasi client mobile melalui Expo App di iOS, yaitu membuat home screen dan dashboard. Saya juga sudah berhasil fetch data dari API server heroku dari challenge 1.
-  ...
+### Backend
+* [NodeJS](https://nodejs.org/en/) to run the server
+* [GraphQL](https://graphql.org/) to manage the data communication with the frontend declaratively
+* [MongoDB](https://www.mongodb.com/) to store the data in a scalable way using NoSQL
 
-## W2D3
-
-Target:
-
-- [✅] Memahami React Native Gesture Handler
-- [✅] Memahami NoSQL: Mongodb
-- [✅] Membuat service users dengan Mongodb (Kerjakan di `server/services/users`)
-- [✅] Membuat action pada users: Read, Create & Delete (Update optional)
-
-**Report:**
-
-- Hari ini saya belajar react native gesture handler dan Mongodb
-- Progress challenge hari ini, saya mencoba react navigation dengan Bottom Tab. Saya juga belajar styling icon tab tersebut.
-  ...
-
-## W2D4
-
-Target:
-
-- [✅] Membuat Server Baru, Microservices
-- [✅] Memisahkan service user dan app
-- [✅] Membuat Orchestrator-express yang bisa komunikasi ke service user dan app
-- [✅] Memahami cache dalam database
-- [✅] Install dataabase Redis dan menggunakan ioRedis sebagai cache
-- [✅] Menjaga relasi User dengan product pada microservice
-
-**Report:**
-
-- Hari ini saya belajar materi baru, yaitu Microservices
-- Progress challenge hari ini, saya membuat server user menggunakan MongoDB. Saya berhasil membuat feature CRD untuk user di database collection Mongo.
-- Progress lainnya, saya melakukan setup orchestrator express untuk membuat komunikasi ke service user dan app
-  ...
-
-## W2D5
-
-Target:
-
-- [✅] Memahami GraphQL dan tahu perbedaan dengan RESTful API
-- [✅] Membuat Orchestrator dengan menggunakan GraphQL
-- [✅] Memahami Typedefs, Resolvers
-- [✅] Mampu membuat Query dan Mutation
-- [✅] Menggunakan redis pada graphql untuk kebutuhan cache server
-- [ ] Memahami Apollo-Client & Implementasi pada mobile apps
-- [ ] Memahami cache pada Apollo-Client
-
-**Report:**
-
-...
-
-## W3D1
-
-Target:
-
-- [ ] Memahami Docker
-- [ ] Implementasi Docker pada aplikasi server
-
-**Report:**
-
-...
+## To-do(s)
+Since this is in an early stage of development, the app is still missing the following features:
+* Add register & sign in feature so that only logged in user can access the app
+* No search features exist
+* Feature for users to rate and review movies that they've seen just like original Letterboxd
