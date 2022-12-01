@@ -8,6 +8,8 @@ Users can see all list of movies and see each movie in detail.
 
 ## Demo
 
+Check out the live demo [here](https://expo.dev/@yasminnabila/client-mobile?serviceType=classic&distribution=expo-go), deployed with Expo.
+
 https://user-images.githubusercontent.com/108170309/204283821-62f82d0a-8a42-4785-80fa-e0680798c188.mp4
 
 ## Stack
